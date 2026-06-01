@@ -1,52 +1,104 @@
-img {
-    width: 300px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 12px;
-}
 body {
-    background-color: lightgray;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, sans-serif;
+    background-color: #eef7ee;
+    color: #132a13;
 }
+
 header {
-    background-color: rgb(198, 198, 214);
     text-align: center;
-    padding: 20px;
-    color: rgb(14, 96, 167);
+    padding: 40px;
+    background-color: #1b4332;
+    color: white;
 }
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    align-items: center;
+    padding: 30px 40px;
+}
+
 nav a {
-    text-decoration: none;
-    margin: 10px;
-    color: rgb(131, 103, 169);
+    color: #ffd60a;
+    font-weight: bold;
 }
-section {
+
+header img {
+    width: 320px;
+    border-radius: 20px;
+    border: 4px solid #ffd60a;
+}
+
+#presentation, #palmares {
+    
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
     background-color: white;
-    width: 90%;
-    margin: 30px auto;
-    padding: 20 px;
-    border-radius: 12px;
+    border-radius: 20px;
+    border-left: 8px solid #ffd60a;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
-footer {
-    background-color: rgb(198, 198, 214);
+
+
+h2 {
     text-align: center;
-    padding: 20px;
+    color: #1b4332;
 }
-#cartes {
+
+.cartes-container {
     display: flex;
+    justify-content: center;
+    gap: 30px;
     flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+    margin: 40px;
 }
-#cartes h2 {
-    width: 100%;
-}
+
 article {
-    background-color: rgb(235, 235, 235);
-    padding: 15px;
-    border-radius: 10px;
-    width: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    background-color: white;
+    width: 220px;
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+    border: 3px solid #95d5b2;
+    transition: 0.3s;
+}
+
+article:hover {
+    transform: scale(1.05);
+    border-color: #ffd60a;
+}
+
+.icone {
+    font-size: 28px;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #1b4332;
+    color: white;
+}
+
+footer a {
+    color: #ffd60a;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    header img {
+        width: 220px;
+    }
+
+    .cartes-container {
+        flex-direction: column;
+        align-items: center;
+    }
 }
